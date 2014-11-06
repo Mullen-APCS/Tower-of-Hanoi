@@ -3,15 +3,13 @@ public class TowerOfHanoi
 	public static void main (String[] args)
 		{
 		int n = 4;  
-		String StepsToSolution;
-		StepsToSolution = hanoi(n, 1, 3);
-		System.out.println(StepsToSolution);
+		System.out.println(hanoi(n, 1, 3));
 		}
 	
    public static String hanoi(int nDisks, int fromPeg, int toPeg)
 	   {
 	   int helpPeg;
-	   String Sol1, Sol2, myStep, mySol;;
+	   String Sol1, Sol2, myStep;
 
 	   if ( nDisks == 1 )
 		   {
@@ -25,9 +23,7 @@ public class TowerOfHanoi
 		   myStep = fromPeg + " -> " + toPeg + "\n";
 		   Sol2 = hanoi(nDisks-1, helpPeg, toPeg);
 
-		   mySol = Sol1 + myStep + Sol2;
-
-		   return mySol;
+		   return Sol1 + myStep + Sol2;
 		   }
 	   }
 	}
